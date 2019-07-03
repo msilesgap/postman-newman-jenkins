@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Project for storing Postman tests",
   "scripts": {
-    "api-test": "new run jsonplaceholder.postman_collection.json"
+    "api-tests": "newman run jsonplaceholder.postman_collection.json"
   },
   "author": "Moises Siles",
   "dependencies": {
