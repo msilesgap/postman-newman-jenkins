@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Project for storing Postman tests",
   "scripts": {
-    "api-tests": "newman run jsonplaceholder.postman_collection.json --reports junit --reporter-junit-export newman.xml"
+    "api-tests": "newman run jsonplaceholder.postman_collection.json --reporters junit --reporter-junit-export newman.xml"
   },
   "author": "Moises Siles",
   "dependencies": {
