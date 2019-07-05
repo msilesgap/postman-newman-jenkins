@@ -6,100 +6,110 @@
 	},
 	"item": [
 		{
-			"name": "Posts",
-			"event": [
+			"name": "Comments",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"id": "5a4c3ea2-77d4-49b3-a4fe-9ced314c5b21",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"pm.test(\"Response time is less than 50ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(50);",
-							"});",
-							"",
-							"pm.test(\"Successful POST request\", function () {",
-							"    pm.expect(pm.response.code).to.be.oneOf([200,201,202]);",
-							"});",
-							"",
-							"pm.test(\"Json value equals to\", function () {",
-							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData[0].id).to.eql(1);",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts",
-					"protocol": "https",
-					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+					"name": "Comments",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "965258f3-146e-4f33-9352-802855d3a900",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 50ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(50);",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,201,202]);",
+									"});",
+									"",
+									"pm.test(\"Json value equals to\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].id).to.eql(5);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
 					],
-					"path": [
-						"posts"
-					]
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts/1/comments",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts",
+								"1",
+								"comments"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Comments",
-			"event": [
+			"name": "Posts",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"id": "965258f3-146e-4f33-9352-802855d3a900",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"pm.test(\"Response time is less than 50ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(50);",
-							"});",
-							"",
-							"pm.test(\"Successful POST request\", function () {",
-							"    pm.expect(pm.response.code).to.be.oneOf([200,201,202]);",
-							"});",
-							"",
-							"pm.test(\"Json value equals to\", function () {",
-							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData[0].id).to.eql(5);",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts/1/comments",
-					"protocol": "https",
-					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+					"name": "Posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5a4c3ea2-77d4-49b3-a4fe-9ced314c5b21",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 50ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(50);",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,201,202]);",
+									"});",
+									"",
+									"pm.test(\"Json value equals to\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].id).to.eql(1);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
 					],
-					"path": [
-						"posts",
-						"1",
-						"comments"
-					]
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
