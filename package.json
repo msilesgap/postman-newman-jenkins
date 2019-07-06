@@ -7,6 +7,7 @@
   },
   "author": "Moises Siles",
   "dependencies": {
-    "newman": "^4.5.1"
+    "newman": "^4.5.1",
+    "newman-reporter-htmlextra": "^1.8.1"
   }
 }
